@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inspector PR Merge Test</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap');
+
+    :root {
+      --bg: #0e0f11;
+      --surface: #16181c;
+      --border: #23262d;
+      --text-primary: #e8e9eb;
+      --text-secondary: #7a7f8a;
+      --accent: #c4f042;
+      --accent-dim: rgba(196, 240, 66, 0.08);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text-primary);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .container {
+      max-width: 480px;
+      width: 100%;
+      padding: 0 24px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      color: var(--accent);
+      background: var(--accent-dim);
+      border: 1px solid rgba(196, 240, 66, 0.12);
+      padding: 4px 10px;
+      border-radius: 3px;
+      margin-bottom: 16px;
+    }
+
+    .badge::before {
+      content: '';
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--accent);
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.4; }
+      50% { opacity: 1; }
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.5;
+      margin-bottom: 24px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 14px 16px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transition: border-color 0.15s ease;
+    }
+
+    .card:hover {
+      border-color: rgba(196, 240, 66, 0.2);
+    }
+
+    .card-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 3px;
+      background: var(--accent-dim);
+      border: 1px solid rgba(196, 240, 66, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 14px;
+    }
+
+    .card-content h3 {
+      font-size: 13px;
+      font-weight: 500;
+      margin-bottom: 2px;
+    }
+
+    .card-content p {
+      font-size: 12px;
+      color: var(--text-secondary);
+    }
+
+    .footer {
+      margin-top: 24px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer span {
+      width: 1px;
+      height: 10px;
+      background: var(--border);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="badge">ACTIVE</div>
+    <h1>Inspector PR Merge Test</h1>
+    <p class="subtitle">A test repository for validating pull request workflows, branch merging, and CI integration.</p>
+
+    <div class="card">
+      <div class="card-icon">&#9675;</div>
+      <div class="card-content">
+        <h3>Branch Management</h3>
+        <p>Create, merge, and revert feature branches</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">&#9651;</div>
+      <div class="card-content">
+        <h3>PR Workflows</h3>
+        <p>Test automated pull request creation and review</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">&#9632;</div>
+      <div class="card-content">
+        <h3>Conflict Resolution</h3>
+        <p>Handle merge conflicts and dependency updates</p>
+      </div>
+    </div>
+
+    <div class="footer">
+      v1.0.0 <span></span> TypeScript <span></span> Node.js
+    </div>
+  </div>
+</body>
+</html>
